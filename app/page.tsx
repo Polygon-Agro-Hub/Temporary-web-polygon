@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       {/* Dark mode toggle - positioned top right */}
-      <div className="fixed top-4 right-4 z-50">
+      {/* <div className="fixed top-4 right-4 z-50">
         <DarkThemeToggle />
-      </div>
+      </div> */}
 
       {/* Main Content Container */}
       <div className="flex min-h-screen flex-col items-center justify-center px-4 py-12 text-center">
