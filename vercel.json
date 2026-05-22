@@ -1,42 +1,37 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    
     { 
       "source": "/cc-api/(.*)",
       "destination": "https://cc-api-prod.polygonagro.com/$1"
-      
     },
     { 
       "source": "/plantcare-api/(.*)",
       "destination": "https://plantcare-api-prod.polygonagro.com/$1"
-      
     },
-     
     { 
       "source": "/collector-api/(.*)",
       "destination": "https://collector-api-prod.polygonagro.com/$1"
-      
     },
     { 
       "source": "/dash-api/(.*)",
       "destination": "https://dash-api-prod.polygonagro.com/$1"
-      
+    },
+    {
+      "source": "/admin-api/agro-api/admin-api/api/(.*)",
+      "destination": "https://admin-api-prod.polygonagro.com/agro-api/admin-api/api/$1"
     },
     {
       "source": "/admin-api/(.*)",
       "destination": "https://admin-api-prod.polygonagro.com/$1"
-      
     },
     {
       "source": "/admin/(.*)",
       "destination": "https://admin-panel-prod.polygonagro.com/$1"
-      
     },
     {
       "source": "/cc/(.*)",
       "destination": "https://cc-web-prod.polygonagro.com/$1"
-      
     },
     {
       "source": "/market/_next/static/(.*)",
@@ -46,15 +41,9 @@
       "source": "/market/(.*)",
       "destination": "https://marketplace-app-dev.vercel.app/market/$1"
     },
-    {
-      "source": "/",
-      "destination": "https://www.polygonagro.com/$1"
-      
-    },
     { 
       "source": "/(.*)",
       "destination": "https://www.polygonagro.com/$1"
-      
     }
   ],
   "headers": [
@@ -64,6 +53,18 @@
         {
           "key": "x-vercel-enable-rewrite-caching",
           "value": "0"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
         }
       ]
     }
